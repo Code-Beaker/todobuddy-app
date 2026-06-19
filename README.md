@@ -41,7 +41,7 @@ I will work on some other projects as well. Now, I'm thinking about creating a p
 
 ### Projects
 
-- [Deployed link]()
+- [Deployed link](https://todobuddy-app.vercel.app/)
 
 ### Profile
 
