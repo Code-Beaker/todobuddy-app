@@ -50,7 +50,7 @@ const Todo = () => {
   }, [todoList]);
 
   return (
-    <div className="bg-slate-800 rounded-2xl px-3 py-4 min-w-[25rem] md:p-6 shadow-xl transition">
+    <div className="bg-slate-800 rounded-2xl px-3 py-4 min-w-[23rem] md:p-6 shadow-xl transition">
       <h1 className="text-center text-2xl mb-6 font-extrabold text-slate-100">
         TodoBuddy
       </h1>
