@@ -50,7 +50,7 @@ const Todo = () => {
   }, [todoList]);
 
   return (
-    <div className="bg-slate-800 rounded-4xl p-6 shadow-xl">
+    <div className="bg-slate-800 rounded-4xl p-6 shadow-xl transition">
       <h1 className="text-center text-2xl mb-6 font-extrabold text-slate-100">
         TodoBuddy
       </h1>
@@ -58,7 +58,7 @@ const Todo = () => {
         onSubmit={(e) => {
           e.preventDefault();
         }}
-        className="flex bg-white items-center gap-3 p-2 rounded-full"
+        className="flex justify-between bg-white items-center gap-3 p-2 rounded-full"
       >
         <input
           ref={inputRef}
@@ -73,19 +73,24 @@ const Todo = () => {
           Add <img src={addIcon} />
         </button>
       </form>
-      <div className="flex flex-col overflow-y-scroll max-h-[15em] gap-2 my-4">
-        {todoList.map((item, index) => {
-          return (
-            <TodoItems
-              key={index}
-              text={item.text}
-              id={item.id}
-              isComplete={item.isComplete}
-              deleteTodo={deleteTodo}
-              toggleTodo={toggleTodo}
-            />
-          );
-        })}
+      <div className="relative my-4">
+        <div className="items-container flex flex-col overflow-y-auto py-4 max-h-[15em] gap-2 my-4 scrollbar-thin scrollbar-thumb-slate-500 scrollbar-track-slate-700">
+          <div className="fade-top"></div>
+
+          {todoList.map((item, index) => {
+            return (
+              <TodoItems
+                key={item.id}
+                text={item.text}
+                id={item.id}
+                isComplete={item.isComplete}
+                deleteTodo={deleteTodo}
+                toggleTodo={toggleTodo}
+              />
+            );
+          })}
+        </div>
+        <div className="fade-bot"></div>
       </div>
     </div>
   );
