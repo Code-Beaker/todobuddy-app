@@ -5,7 +5,7 @@ const TodoItems = ({ text, id, isComplete, deleteTodo, toggleTodo }) => {
   return (
     <div className="flex w-full items-center gap-2">
       <div
-        className={`flex w-full items-center justify-between p-3 bg-slate-700 rounded-full cursor-pointer transition ${isComplete ? "opacity-50" : "opacity-100"}`}
+        className={`flex w-full items-center justify-between p-3 bg-slate-700 rounded-lg md:rounded-full cursor-pointer transition ${isComplete ? "opacity-50" : "opacity-100"}`}
       >
         <button
           onClick={() => {

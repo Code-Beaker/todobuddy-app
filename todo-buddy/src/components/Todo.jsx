@@ -50,7 +50,7 @@ const Todo = () => {
   }, [todoList]);
 
   return (
-    <div className="bg-slate-800 rounded-4xl p-6 shadow-xl transition">
+    <div className="bg-slate-800 rounded-2xl px-3 py-4 min-w-[25rem] md:p-6 shadow-xl transition">
       <h1 className="text-center text-2xl mb-6 font-extrabold text-slate-100">
         TodoBuddy
       </h1>
@@ -58,17 +58,17 @@ const Todo = () => {
         onSubmit={(e) => {
           e.preventDefault();
         }}
-        className="flex justify-between bg-white items-center gap-3 p-2 rounded-full"
+        className="flex flex-col md:flex-row justify-between bg-white items-center gap-3 p-2 rounded-xl md:rounded-full"
       >
         <input
           ref={inputRef}
-          className="px-6 py-3  rounded-full text-slate-800 placeholder:text-slate-400 outline-hidden outline-2 focus:outline-blue-600"
+          className="w-full px-2 py-3  rounded-full text-slate-800 placeholder:text-slate-400 outline-hidden outline-2 focus:outline-blue-600"
           placeholder="Complete homework..."
           type="text"
         />
         <button
           onClick={addTodo}
-          className="bg-amber-500 flex gap-2 px-6 py-3 rounded-full cursor-pointer font-bold  transition hover:opacity-95 active:scale-95"
+          className="bg-amber-500 w-full md:w-fit flex items-center justify-center gap-2 px-6 py-3 rounded md:rounded-full cursor-pointer font-bold  transition hover:opacity-95 active:scale-95"
         >
           Add <img src={addIcon} />
         </button>
